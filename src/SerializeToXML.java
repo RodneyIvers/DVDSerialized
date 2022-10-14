@@ -5,7 +5,8 @@ import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SerializeToXML {
+public class SerializeToXML
+{
 
     private static final String SERIALIZED_FILE_NAME="dvd.xml";
 
@@ -28,7 +29,9 @@ public class SerializeToXML {
         XMLEncoder encoder=null;
         try{
             encoder=new XMLEncoder(new BufferedOutputStream(new FileOutputStream(SERIALIZED_FILE_NAME)));
-        }catch(FileNotFoundException fileNotFound){
+        }
+        catch(FileNotFoundException fileNotFound)
+        {
             System.out.println("ERROR: While Creating or Opening the File dvd.xml");
         }
         encoder.writeObject(bourneSeries);
